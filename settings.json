@@ -1,0 +1,102 @@
+{
+  // --- プロジェクトに応じて切り替える可能性があるもの ---
+
+  // ファイルがファイルの内容に基づいて開かれる場合、#editor.tabSize# と #editor.insertSpaces# を自動的に検出するかどうかを制御します。
+  "editor.detectIndentation": true,
+  // Tab キーを押すとスペースが挿入されます。#editor.detectIndentation# がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
+  "editor.insertSpaces": true,
+  // 1 つのタブに相当するスペースの数。#editor.detectIndentation# がオンの場合、この設定はファイル コンテンツに基づいて上書きされます。
+  "editor.tabSize": 2,
+  // 有効にすると、ファイルの保存時に最新の行を末尾に挿入します。
+  "files.insertFinalNewline": true,
+  // 有効にすると、ファイルの保存時に末尾の空白をトリミングします。
+  "files.trimTrailingWhitespace": true,
+  // 既定の HTML フォーマッタを有効/無効にします。
+  "html.format.enable": true,
+
+
+
+  // --- 以下汎用 ---
+
+  // フォント ファミリを制御します。
+  "editor.fontFamily": "Ubuntu Mono, Takao ゴシック, Consolas, 'Courier New', monospace",
+  // フォント サイズ (ピクセル単位) を制御します。
+  "editor.fontSize": 15,
+  // ミニマップのスライダーを自動的に非表示にするかどうかを制御します。
+  "editor.minimap.showSlider": "always",
+  // エディターで空白文字を表示するかどうかを制御します。
+  "editor.renderWhitespace": "boundary",
+  // 特定の等幅文字数の後に垂直ルーラーを表示します。複数のルーラーには複数の値を使用します。配列が空の場合はルーラーを表示しません。
+  "editor.rulers": [
+    80,
+    120
+  ],
+  // 行の折り返し方法を制御します。
+  // bounded: ビューポートと #editor.wordWrapColumn# の最小値で行を折り返します。 `Alt+Z`
+  "editor.wordWrap": "bounded",
+  // #editor.wordWrap# が wordWrapColumn または bounded の場合に、エディターの折り返し桁を制御します。
+  "editor.wordWrapColumn": 120,
+  // 有効な場合、ファイルを開くときに文字セット エンコードをエディターが推測します。言語ごとに構成することも可能です。
+  "files.autoGuessEncoding": true,
+  // ターミナルがそのバッファーに保持できる最大行数を制御します。
+  "terminal.integrated.scrollback": 20000,
+  // Windows でターミナルが使用するシェルのパス。シェルの構成について詳細を表示。
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // 言語に対するファイルの関連付け (例: `"*.extension": "html") を構成します。これらの関連付けは、インストールされている言語の既定の関連付けより優先されます。
+  "files.associations": {
+    "*.cgi": "perl",
+    "*.tpl": "php",
+    "*.yml": "yaml",
+    "*.geojson": "json"
+  },
+  // 大きなファイルを開こうとしたとき、VS Code の再起動後に使用できるメモリを制御します。コマンド ラインで --max-memory=NEWSIZE を指定するのと同じ効果があります。
+  "files.maxMemoryForLargeFilesMB": 1024,
+  // ファイルの読み取り/書き込みで使用する既定の文字セット エンコーディング。言語ごとに構成することも可能です。
+  "files.encoding": "utf8",
+  // 検索をサイドバーのビューとして表示するか、より水平方向の空間をとるためにパネル領域のパネルとして表示するかを制御します。
+  "search.location": "panel",
+  // 既定の改行文字。
+  "files.eol": "\n",
+
+  // The path to a PHP 7+ executable.
+  // "php.executablePath": "C:\\php-7.2.11-Win32-VC15-x86\\php.exe",
+
+
+
+  // 拡張子に対する制御
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.insertSpaces": true
+  },
+  "[php]": {
+    "editor.wordWrap": "off",
+  },
+  "[html]": {
+    "editor.wordWrap": "off",
+  },
+  "[csv]": {
+    "files.encoding": "shiftjis",
+  },
+
+
+
+  // sshfs.configs
+  "sshfs.configs": [
+    {
+      "label": "vagrant",
+      "root": "/",
+      "host": "192.168.33.10",
+      "port": 22,
+      "username": "vagrant",
+      "privateKeyPath": "C:\\Users\\username\\.ssh\\id_rsa",
+      "name": "vagrant"
+    }
+  ],
+
+
+
+  // DO NOT SET THIS MANUALLY
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0
+}
