@@ -60,6 +60,8 @@
 
   // The path to a PHP 7+ executable.
   // "php.executablePath": "C:\\php-7.2.11-Win32-VC15-x86\\php.exe",
+  // Points to the php-cs-fixer exectuable
+  // "php-cs-fixer.executablePath": "${extensionPath}\\php-cs-fixer.phar",
 
 
 
