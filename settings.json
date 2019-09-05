@@ -13,6 +13,11 @@
   "files.trimTrailingWhitespace": true,
   // 既定の HTML フォーマッタを有効/無効にします。
   "html.format.enable": true,
+  // 行の折り返し方法を制御します。
+  // bounded: ビューポートと #editor.wordWrapColumn# の最小値で行を折り返します。 `Alt+Z`
+  "editor.wordWrap": "bounded",
+  // 既定の改行文字。
+  "files.eol": "\n",
 
 
 
@@ -31,9 +36,6 @@
     80,
     120
   ],
-  // 行の折り返し方法を制御します。
-  // bounded: ビューポートと #editor.wordWrapColumn# の最小値で行を折り返します。 `Alt+Z`
-  "editor.wordWrap": "bounded",
   // #editor.wordWrap# が wordWrapColumn または bounded の場合に、エディターの折り返し桁を制御します。
   "editor.wordWrapColumn": 120,
   // 有効な場合、ファイルを開くときに文字セット エンコードをエディターが推測します。言語ごとに構成することも可能です。
@@ -55,8 +57,6 @@
   "files.encoding": "utf8",
   // 検索をサイドバーのビューとして表示するか、より水平方向の空間をとるためにパネル領域のパネルとして表示するかを制御します。
   "search.location": "panel",
-  // 既定の改行文字。
-  "files.eol": "\n",
 
   // The path to a PHP 7+ executable.
   // "php.executablePath": "C:\\php-7.2.11-Win32-VC15-x86\\php.exe",
