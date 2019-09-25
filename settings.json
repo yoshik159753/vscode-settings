@@ -79,6 +79,9 @@
   "[csv]": {
     "files.encoding": "shiftjis",
   },
+  "[python]": {
+    "editor.tabSize": 4,
+  },
 
 
 
