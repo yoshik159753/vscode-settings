@@ -63,6 +63,18 @@
   // Points to the php-cs-fixer exectuable
   // "php-cs-fixer.executablePath": "${extensionPath}\\php-cs-fixer.phar",
 
+  // Whether to lint Python files.
+  "python.linting.enabled": true,
+  // Whether to lint Python files using pylint.
+  "python.linting.pylintEnabled": false,
+  // Whether to lint Python files using flake8
+  "python.linting.flake8Enabled": true,
+  // Whether to lint Python files when saved.
+  "python.linting.lintOnSave": true,
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.linting.flake8Args": ["--ignore=E501"],
+  // Provider for formatting. Possible options include 'autopep8', 'black', and 'yapf'.
+  "python.formatting.provider": "autopep8",
 
 
   // 拡張子に対する制御
@@ -103,5 +115,5 @@
   // DO NOT SET THIS MANUALLY
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0 
 }
