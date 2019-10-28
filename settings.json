@@ -76,11 +76,17 @@
   // Provider for formatting. Possible options include 'autopep8', 'black', and 'yapf'.
   "python.formatting.provider": "autopep8",
 
+  // markdownlint config object
+  "markdownlint.config": {
+    "default": true,
+    "MD007": { "indent": 4 }
+  },
 
   // 拡張子に対する制御
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
   },
   "[php]": {
     "editor.wordWrap": "off",
