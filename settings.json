@@ -79,7 +79,8 @@
   // markdownlint config object
   "markdownlint.config": {
     "default": true,
-    "MD007": { "indent": 4 }
+    "MD007": { "indent": 4 },
+    "MD024": { "siblings_only": true},
   },
 
   // 拡張子に対する制御
