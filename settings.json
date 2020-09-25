@@ -15,7 +15,7 @@
   "html.format.enable": true,
   // 行の折り返し方法を制御します。
   // bounded: ビューポートと #editor.wordWrapColumn# の最小値で行を折り返します。 `Alt+Z`
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "off",
   // 既定の改行文字。
   "files.eol": "\n",
 
@@ -55,8 +55,8 @@
   "files.maxMemoryForLargeFilesMB": 1024,
   // ファイルの読み取り/書き込みで使用する既定の文字セット エンコーディング。言語ごとに構成することも可能です。
   "files.encoding": "utf8",
-  // 検索をサイドバーのビューとして表示するか、より水平方向の空間をとるためにパネル領域のパネルとして表示するかを制御します。
-  "search.location": "panel",
+  // サイド バーとアクティビティ バーの位置を制御します。ワークベンチの左側または右側のいずれかに表示できます。
+  "workbench.sideBar.location": "right",
 
   // The path to a PHP 7+ executable.
   // "php.executablePath": "C:\\php-7.2.11-Win32-VC15-x86\\php.exe",
@@ -118,9 +118,14 @@
   ],
 
 
+  // gitlens
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.statusBar.format": "${author}, ${agoOrDate} • ${message}",
 
   // DO NOT SET THIS MANUALLY
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0 
+  "window.zoomLevel": 0
 }
