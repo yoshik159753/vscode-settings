@@ -61,7 +61,7 @@
   // サイド バーとアクティビティ バーの位置を制御します。ワークベンチの左側または右側のいずれかに表示できます。
   "workbench.sideBar.location": "right",
   // 有効にすると、TAB キーを押したときに Emmet 省略記法が展開されます。
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
 
 
 
