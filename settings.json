@@ -40,6 +40,12 @@
   "editor.wordWrapColumn": 120,
   // 構文ハイライトをクリップボードにコピーするかどうかを制御します。
   "editor.copyWithSyntaxHighlighting": false,
+  // エディターで制御文字を表示するかどうかを制御します。
+  "editor.renderControlCharacters": true,
+  // フォントの合字やフォントの機能を構成します。合字を有効または無効にするブール値または CSS 'font-feature-settings' プロパティの値の文字列を指定できます。
+  "editor.fontLigatures": true,
+  // 角かっこのペアの彩色を有効にするかどうかを制御します。角かっこの強調表示の色をオーバーライドするには、Workbench: Color Customizations を使用します。
+  "editor.bracketPairColorization.enabled": true,
 
   // 有効な場合、ファイルを開くときに文字セット エンコードをエディターが推測します。言語ごとに構成することも可能です。
   "files.autoGuessEncoding": true,
