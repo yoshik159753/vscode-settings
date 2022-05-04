@@ -128,6 +128,12 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.statusBar.format": "${author}, ${agoOrDate} • ${message}",
 
+
+  // rest-client
+  // ユニコードをデコードする。(日本語を表示するため)
+  "rest-client.decodeEscapedUnicodeCharacters": true
+
+
   // DO NOT SET THIS MANUALLY
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
