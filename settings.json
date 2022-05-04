@@ -38,6 +38,9 @@
   ],
   // #editor.wordWrap# が wordWrapColumn または bounded の場合に、エディターの折り返し桁を制御します。
   "editor.wordWrapColumn": 120,
+  // 構文ハイライトをクリップボードにコピーするかどうかを制御します。
+  "editor.copyWithSyntaxHighlighting": false,
+
   // 有効な場合、ファイルを開くときに文字セット エンコードをエディターが推測します。言語ごとに構成することも可能です。
   "files.autoGuessEncoding": true,
   // ターミナルがそのバッファーに保持できる最大行数を制御します。
