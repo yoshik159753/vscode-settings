@@ -1,0 +1,320 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Install html extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - abusaidm.html-snippets
+        # - ecmel.vscode-html-css
+        # - zignd.html-css-class-completion
+        # - mkaufman.htmlhint
+        - vincaslt.highlight-matching-tag
+        - techer.open-in-browser
+      loop_control:
+        loop_var: extension
+
+    - name: Install CSS, SCSS and Less extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        # - ecmel.vscode-html-css
+        # - zignd.html-css-class-completion
+        # - michelemelluso.code-beautifier
+        # - shinnn.stylelint
+        # 個人的に追加
+        - thekalinga.bootstrap4-vscode
+      loop_control:
+        loop_var: extension
+
+    - name: Install TypeScript extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        # - johnpapa.angular2
+        # - joelday.docthis
+        - ms-vscode.vscode-typescript-tslint-plugin
+        # - dskwrk.vscode-generate-getter-setter
+      loop_control:
+        loop_var: extension
+
+    - name: Install Markdown extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        # linter, 色, 目次, 見出しに番号付与, テーブル生成, リンク生成, etc...
+        - davidanson.vscode-markdownlint
+        - ms-vscode.theme-markdownkit
+        - joffreykern.markdown-toc
+        - mdickin.markdown-shortcuts
+        # github スタイル, 数式, 絵文字, gitbucket スタイル
+        - bierner.markdown-preview-github-styles
+        - goessner.mdmath
+        - bierner.markdown-emoji
+        - bierner.emojisense
+        - hbrok.markdown-preview-bitbucket
+      loop_control:
+        loop_var: extension
+
+    - name: Install C/C++ extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - ms-vscode.cpptools
+      loop_control:
+        loop_var: extension
+
+    - name: Install Java extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        # 公式が必須として推奨しているもの
+        - redhat.java
+        - vscjava.vscode-java-debug
+        - vscjava.vscode-java-test
+        - vscjava.vscode-maven
+        - vscjava.vscode-java-dependency
+        - visualstudioexptteam.vscodeintellicode
+        # 公式が人気があるとして推奨しているもの
+        - pivotal.vscode-spring-boot
+        - vscjava.vscode-spring-initializr
+        - vscjava.vscode-spring-boot-dashboard
+        - adashen.vscode-tomcat
+        - summersun.vscode-jetty
+        - shengchen.vscode-checkstyle
+        # 個人的に追加
+        - gabrielbb.vscode-lombok
+      loop_control:
+        loop_var: extension
+
+    - name: Install PHP extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - formulahendry.code-runner
+        - xdebug.php-debug
+        # - ecmel.vscode-html-css
+        # 個人的に追加
+        - junstyle.php-cs-fixer
+        - neilbrayfield.php-docblocker
+      loop_control:
+        loop_var: extension
+
+    - name: Install Python extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - ms-python.python
+        - formulahendry.code-runner
+        - visualstudioexptteam.vscodeintellicode
+        # - ms-python.anaconda-extension-pack
+        - ms-python.vscode-pylance
+      loop_control:
+        loop_var: extension
+
+    - name: Install Go extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - golang.go
+      loop_control:
+        loop_var: extension
+
+    # - name: Install CSharp extensions for vscode
+    #   include_tasks: sub_module.yml
+    #   loop:
+    #     - ms-vscode.csharp
+    #     - formulahendry.code-runner
+    #     - jchannon.csharpextensions
+    #     - k--kato.docomment
+    #   loop_control:
+    #     loop_var: extension
+
+    - name: Install Ruby extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - rebornix.ruby
+      loop_control:
+        loop_var: extension
+
+    - name: Install Docker extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - ms-azuretools.vscode-docker
+      loop_control:
+        loop_var: extension
+
+    - name: Install Ansible extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - redhat.ansible
+      loop_control:
+        loop_var: extension
+
+    - name: Install Vue extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - octref.vetur
+      loop_control:
+        loop_var: extension
+
+    - name: Install React extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - mgmcdermott.vscode-language-babel
+      loop_control:
+        loop_var: extension
+
+    - name: Install Javascript extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - msjsdiag.debugger-for-chrome
+        - dbaeumer.vscode-eslint
+        - esbenp.prettier-vscode
+      loop_control:
+        loop_var: extension
+
+    - name: Install laravel extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - onecentlin.laravel-blade
+        - onecentlin.laravel5-snippets
+        - ryannaddy.laravel-artisan
+        - codingyu.laravel-goto-view
+      loop_control:
+        loop_var: extension
+
+    - name: Install remote development extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - ms-vscode-remote.remote-ssh
+        - ms-vscode-remote.remote-containers
+        # - ms-vscode-remote.remote-wsl
+      loop_control:
+        loop_var: extension
+
+    - name: Install Rust extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - rust-lang.rust
+      loop_control:
+        loop_var: extension
+
+    - name: Install Git extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - eamodio.gitlens
+        - donjayamanne.githistory
+        - mhutchie.git-graph
+      loop_control:
+        loop_var: extension
+
+    - name: Install other extensions for vscode
+      include_tasks: sub_module.yml
+      loop:
+        - ms-ceintl.vscode-language-pack-ja
+        - redhat.vscode-yaml
+        - johnstoncode.svn-scm
+        - jebbs.plantuml
+        # - vscodevim.vim
+        - kelvin.vscode-sshfs
+        - liximomo.sftp
+        - mikestead.dotenv
+        - rogalmic.bash-debug
+        - joaompinto.asciidoctor-vscode
+        - hashicorp.terraform
+        - ms-vscode.hexeditor
+        - grapecity.gc-excelviewer
+        - mechatroner.rainbow-csv
+        - adpyke.vscode-sql-formatter
+        - humao.rest-client
+        - mongodb.mongodb-vscode
+        - arjun.swagger-viewer
+        - hediet.vscode-drawio
+      loop_control:
+        loop_var: extension
+
+# ref. https://code.visualstudio.com/docs/languages/overview
+
+# ref. ループに関するノウハウ
+#      https://qiita.com/tbuchi888/items/c03e7cbce8608b1c55f1
+#      https://dev.classmethod.jp/server-side/ansible/loop_multi_tasks_using_include_and_loop_var/
+#      https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html#loop-control
+
+# テスト用削除コマンド
+# code --uninstall-extension abusaidm.html-snippets
+# code --uninstall-extension adashen.vscode-tomcat
+# code --uninstall-extension joffreykern.markdown-toc
+# code --uninstall-extension bierner.markdown-emoji
+# code --uninstall-extension bierner.markdown-preview-github-styles
+# code --uninstall-extension davidanson.vscode-markdownlint
+# code --uninstall-extension dskwrk.vscode-generate-getter-setter
+# code --uninstall-extension ecmel.vscode-html-css
+# code --uninstall-extension xdebug.php-debug
+# code --uninstall-extension formulahendry.code-runner
+# code --uninstall-extension gabrielbb.vscode-lombok
+# code --uninstall-extension goessner.mdmath
+# code --uninstall-extension hbrok.markdown-preview-bitbucket
+# code --uninstall-extension jchannon.csharpextensions
+# code --uninstall-extension jebbs.plantuml
+# code --uninstall-extension joelday.docthis
+# code --uninstall-extension johnpapa.angular2
+# code --uninstall-extension johnstoncode.svn-scm
+# code --uninstall-extension junstyle.php-cs-fixer
+# code --uninstall-extension k--kato.docomment
+# code --uninstall-extension kelvin.vscode-sshfs
+# code --uninstall-extension mdickin.markdown-shortcuts
+# code --uninstall-extension michelemelluso.code-beautifier
+# code --uninstall-extension mkaufman.htmlhint
+# code --uninstall-extension ms-ceintl.vscode-language-pack-ja
+# code --uninstall-extension ms-python.anaconda-extension-pack
+# code --uninstall-extension ms-python.python
+# code --uninstall-extension ms-vscode.cpptools
+# code --uninstall-extension ms-vscode.csharp
+# code --uninstall-extension golang.go
+# code --uninstall-extension ms-vscode.theme-markdownkit
+# code --uninstall-extension ms-vscode.vscode-typescript-tslint-plugin
+# code --uninstall-extension msjsdiag.debugger-for-chrome
+# code --uninstall-extension octref.vetur
+# code --uninstall-extension ms-azuretools.vscode-docker
+# code --uninstall-extension pivotal.vscode-spring-boot
+# code --uninstall-extension rebornix.ruby
+# code --uninstall-extension redhat.java
+# code --uninstall-extension redhat.vscode-yaml
+# code --uninstall-extension shengchen.vscode-checkstyle
+# code --uninstall-extension shinnn.stylelint
+# code --uninstall-extension summersun.vscode-jetty
+# code --uninstall-extension thekalinga.bootstrap4-vscode
+# code --uninstall-extension visualstudioexptteam.vscodeintellicode
+# code --uninstall-extension vscjava.vscode-java-debug
+# code --uninstall-extension vscjava.vscode-java-dependency
+# code --uninstall-extension vscjava.vscode-java-test
+# code --uninstall-extension vscjava.vscode-maven
+# code --uninstall-extension vscjava.vscode-spring-boot-dashboard
+# code --uninstall-extension vscjava.vscode-spring-initializr
+# code --uninstall-extension vscodevim.vim
+# code --uninstall-extension redhat.ansible
+# code --uninstall-extension zignd.html-css-class-completion
+# code --uninstall-extension bierner.emojisense
+# code --uninstall-extension onecentlin.laravel-blade
+# code --uninstall-extension onecentlin.laravel5-snippets
+# code --uninstall-extension ryannaddy.laravel-artisan
+# code --uninstall-extension codingyu.laravel-goto-view
+# code --uninstall-extension mikestead.dotenv
+# code --uninstall-extension vincaslt.highlight-matching-tag
+# code --uninstall-extension ms-vscode-remote.remote-ssh
+# code --uninstall-extension ms-vscode-remote.remote-containers
+# code --uninstall-extension ms-vscode-remote.remote-wsl
+# code --uninstall-extension rogalmic.bash-debug
+# code --uninstall-extension joaompinto.asciidoctor-vscode
+# code --uninstall-extension mgmcdermott.vscode-language-babel
+# code --uninstall-extension rust-lang.rust
+# code --uninstall-extension hashicorp.terraform
+# code --uninstall-extension ms-vscode.hexeditor
+# code --uninstall-extension grapecity.gc-excelviewer
+# code --uninstall-extension mechatroner.rainbow-csv
+# code --uninstall-extension adpyke.vscode-sql-formatter
+# code --uninstall-extension eamodio.gitlens
+# code --uninstall-extension humao.rest-client
+# code --uninstall-extension mongodb.mongodb-vscode
+# code --uninstall-extension ms-python.vscode-pylance
+# code --uninstall-extension arjun.swagger-viewer
+# code --uninstall-extension techer.open-in-browser
+# code --uninstall-extension dbaeumer.vscode-eslint
+# code --uninstall-extension esbenp.prettier-vscode
+# code --uninstall-extension neilbrayfield.php-docblocker
+# code --uninstall-extension donjayamanne.githistory
+# code --uninstall-extension mhutchie.git-graph
+# code --uninstall-extension hediet.vscode-drawio
