@@ -65,10 +65,12 @@
   // ファイルの読み取り/書き込みで使用する既定の文字セット エンコーディング。言語ごとに構成することも可能です。
   "files.encoding": "utf8",
   // サイド バーとアクティビティ バーの位置を制御します。ワークベンチの左側または右側のいずれかに表示できます。
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   // 有効にすると、TAB キーを押したときに Emmet 省略記法が展開されます。
   "emmet.triggerExpansionOnTab": true,
 
+  // Controls whether prettier is enabled or not.
+  "prettier.enable": false,
 
 
   // The path to a PHP 7+ executable.
@@ -80,6 +82,8 @@
   // 組み込みの PHP 言語候補機能を有効にするかどうかを制御します。このサポートによって、PHP グローバルと変数の候補が示されます。(PHP Intelephense を使用するため false)
   "php.suggest.basic": false,
 
+  // 言語サーバーの種類を定義します。
+  "python.languageServer": "Pylance",
   // Whether to lint Python files.
   "python.linting.enabled": true,
   // Whether to lint Python files using pylint.
@@ -93,33 +97,43 @@
   // Provider for formatting. Possible options include 'autopep8', 'black', and 'yapf'.
   "python.formatting.provider": "autopep8",
 
+  // VS Code で名前変更や移動を行ったファイルのインポート パスの自動更新を有効または無効にします。
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
   // markdownlint config object
   "markdownlint.config": {
     "default": true,
     "MD007": { "indent": 4 },
-    "MD024": { "siblings_only": true},
+    "MD024": { "siblings_only": true}
   },
+  // Color theme for the styling of the Markdown preview.
+  "markdown-preview-github-styles.colorTheme": "light",
 
   // 拡張子に対する制御
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
     "editor.insertSpaces": true,
-    "editor.tabSize": 4,
+    "editor.tabSize": 4
   },
   "[php]": {
-    "editor.wordWrap": "off",
+    "editor.wordWrap": "off"
   },
   "[html]": {
     "editor.wordWrap": "off",
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[csv]": {
-    "files.encoding": "shiftjis",
+    "files.encoding": "shiftjis"
   },
   "[python]": {
     "editor.tabSize": 4,
+    "editor.formatOnType": true
   },
 
-
+  // glob パターンをエディターに構成します ("*.hex": "hexEditor.hexedit" など)。これらは既定の動作よりも優先されます。
+  "workbench.editorAssociations": {
+    "*.drawio.png": "hediet.vscode-drawio"
+  },
 
   // sshfs.configs
   "sshfs.configs": [
@@ -144,7 +158,11 @@
 
   // rest-client
   // ユニコードをデコードする。(日本語を表示するため)
-  "rest-client.decodeEscapedUnicodeCharacters": true
+  "rest-client.decodeEscapedUnicodeCharacters": true,
+
+
+  // drawio
+  "hediet.vscode-drawio.theme": "atlas",
 
 
   // DO NOT SET THIS MANUALLY
