@@ -71,14 +71,11 @@
         - vscjava.vscode-java-dependency
         - visualstudioexptteam.vscodeintellicode
         # 公式が人気があるとして推奨しているもの
-        - pivotal.vscode-spring-boot
         - vscjava.vscode-spring-initializr
         - vscjava.vscode-spring-boot-dashboard
         - adashen.vscode-tomcat
         - summersun.vscode-jetty
         - shengchen.vscode-checkstyle
-        # 個人的に追加
-        - gabrielbb.vscode-lombok
       loop_control:
         loop_var: extension
 
@@ -244,7 +241,6 @@
 # code --uninstall-extension ecmel.vscode-html-css
 # code --uninstall-extension xdebug.php-debug
 # code --uninstall-extension formulahendry.code-runner
-# code --uninstall-extension gabrielbb.vscode-lombok
 # code --uninstall-extension goessner.mdmath
 # code --uninstall-extension hbrok.markdown-preview-bitbucket
 # code --uninstall-extension jchannon.csharpextensions
@@ -269,7 +265,6 @@
 # code --uninstall-extension msjsdiag.debugger-for-chrome
 # code --uninstall-extension octref.vetur
 # code --uninstall-extension ms-azuretools.vscode-docker
-# code --uninstall-extension pivotal.vscode-spring-boot
 # code --uninstall-extension rebornix.ruby
 # code --uninstall-extension redhat.java
 # code --uninstall-extension redhat.vscode-yaml
