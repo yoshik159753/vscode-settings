@@ -1,8 +1,8 @@
 # README.md
 
-## Windows
+## ディレクト構成
 
-下記の調整が必要
-
-- `terminal.integrated.shell.windows`
-- `php.executablePath`
+| Column A | Column B |
+|---------|----------|
+| settings | settings.json 格納先 |
+| configuration | 拡張機能用 asnible ファイル群格納先 |

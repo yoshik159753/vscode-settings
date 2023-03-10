@@ -1,0 +1,12 @@
+---
+- name: "Is installed {{ extension }}"
+  find:
+    paths: "{{ ansible_env.HOME }}/.vscode/extensions"
+    patterns: "{{ extension }}*"
+    file_type: directory
+    recurse: no
+  register: result
+
+- name: "Install {{ extension }}"
+  shell: "code --install-extension {{ extension }}"
+  when: result.matched == 0
