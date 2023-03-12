@@ -24,7 +24,7 @@
   // --- 以下汎用 ---
 
   // フォント ファミリを制御します。
-  "editor.fontFamily": "Ubuntu Mono, Takao ゴシック, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "Ubuntu Mono, Takao ゴシック, Consolas, 'Courier New', monospace, MS Gothic",
   // フォント サイズ (ピクセル単位) を制御します。
   "editor.fontSize": 15,
   // ミニマップのスライダーを自動的に非表示にするかどうかを制御します。
@@ -82,6 +82,10 @@
   // 組み込みの PHP 言語候補機能を有効にするかどうかを制御します。このサポートによって、PHP グローバルと変数の候補が示されます。(PHP Intelephense を使用するため false)
   "php.suggest.basic": false,
 
+  // Enable format blade file
+  "blade.format.enable": true,
+
+
   // 言語サーバーの種類を定義します。
   "python.languageServer": "Pylance",
   // Whether to lint Python files.
@@ -96,31 +100,41 @@
   "python.linting.flake8Args": ["--ignore=E501"],
   // Provider for formatting. Possible options include 'autopep8', 'black', and 'yapf'.
   "python.formatting.provider": "autopep8",
+  // Enable testing using pytest.
+  "python.testing.pytestEnabled": true,
+
 
   // VS Code で名前変更や移動を行ったファイルのインポート パスの自動更新を有効または無効にします。
   "javascript.updateImportsOnFileMove.enabled": "always",
+
 
   // markdownlint config object
   "markdownlint.config": {
     "default": true,
     "MD007": { "indent": 4 },
-    "MD024": { "siblings_only": true}
+    "MD024": { "siblings_only": true }
   },
   // Color theme for the styling of the Markdown preview.
   "markdown-preview-github-styles.colorTheme": "light",
+
+
+  // Controls the font size in pixels used in the AsciiDoc preview.
+  "asciidoc.preview.fontSize": 18,
+
 
   // 拡張子に対する制御
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[php]": {
     "editor.wordWrap": "off"
   },
   "[html]": {
     "editor.wordWrap": "off",
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[csv]": {
     "files.encoding": "shiftjis"
@@ -129,11 +143,25 @@
     "editor.tabSize": 4,
     "editor.formatOnType": true
   },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
 
   // glob パターンをエディターに構成します ("*.hex": "hexEditor.hexedit" など)。これらは既定の動作よりも優先されます。
   "workbench.editorAssociations": {
     "*.drawio.png": "hediet.vscode-drawio"
   },
+
 
   // sshfs.configs
   "sshfs.configs": [
