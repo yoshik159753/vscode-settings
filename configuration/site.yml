@@ -145,7 +145,7 @@
     - name: Install Vue extensions for vscode
       include_tasks: sub_module.yml
       loop:
-        - octref.vetur
+        - vue.volar
       loop_control:
         loop_var: extension
 
@@ -264,7 +264,6 @@
 # code --uninstall-extension golang.go
 # code --uninstall-extension ms-vscode.theme-markdownkit
 # code --uninstall-extension msjsdiag.debugger-for-chrome
-# code --uninstall-extension octref.vetur
 # code --uninstall-extension ms-azuretools.vscode-docker
 # code --uninstall-extension rebornix.ruby
 # code --uninstall-extension redhat.java
@@ -317,3 +316,4 @@
 # code --uninstall-extension bmewburn.vscode-intelephense-client
 # code --uninstall-extension ms-python.isort
 # code --uninstall-extension vmware.vscode-spring-boot
+# code --uninstall-extension vue.volar
