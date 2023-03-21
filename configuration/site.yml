@@ -146,6 +146,7 @@
       include_tasks: sub_module.yml
       loop:
         - vue.volar
+        - vue.vscode-typescript-vue-plugin
       loop_control:
         loop_var: extension
 
@@ -317,3 +318,4 @@
 # code --uninstall-extension ms-python.isort
 # code --uninstall-extension vmware.vscode-spring-boot
 # code --uninstall-extension vue.volar
+# code --uninstall-extension vue.vscode-typescript-vue-plugin
