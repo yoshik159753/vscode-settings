@@ -188,7 +188,11 @@
     - name: Install Rust extensions for vscode
       include_tasks: sub_module.yml
       loop:
-        - rust-lang.rust
+        - rust-lang.rust-analyzer
+        - vadimcn.vscode-lldb
+        - serayuzgur.crates
+        - bungcip.better-toml
+        - swellaby.vscode-rust-test-adapter
       loop_control:
         loop_var: extension
 
@@ -296,7 +300,6 @@
 # code --uninstall-extension rogalmic.bash-debug
 # code --uninstall-extension asciidoctor.asciidoctor-vscode
 # code --uninstall-extension mgmcdermott.vscode-language-babel
-# code --uninstall-extension rust-lang.rust
 # code --uninstall-extension hashicorp.terraform
 # code --uninstall-extension ms-vscode.hexeditor
 # code --uninstall-extension grapecity.gc-excelviewer
@@ -319,3 +322,8 @@
 # code --uninstall-extension vmware.vscode-spring-boot
 # code --uninstall-extension vue.volar
 # code --uninstall-extension vue.vscode-typescript-vue-plugin
+# code --uninstall-extension rust-lang.rust-analyzer
+# code --uninstall-extension vadimcn.vscode-lldb
+# code --uninstall-extension serayuzgur.crates
+# code --uninstall-extension bungcip.better-toml
+# code --uninstall-extension swellaby.vscode-rust-test-adapter
