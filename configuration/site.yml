@@ -210,7 +210,7 @@
       loop:
         - ms-ceintl.vscode-language-pack-ja
         - redhat.vscode-yaml
-        - johnstoncode.svn-scm
+        # - johnstoncode.svn-scm
         - jebbs.plantuml
         # - vscodevim.vim
         - kelvin.vscode-sshfs
