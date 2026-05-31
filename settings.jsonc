@@ -82,24 +82,8 @@
   // 組み込みの PHP 言語候補機能を有効にするかどうかを制御します。このサポートによって、PHP グローバルと変数の候補が示されます。(PHP Intelephense を使用するため false)
   "php.suggest.basic": false,
 
-  // Enable format blade file
-  "blade.format.enable": true,
-
-
   // 言語サーバーの種類を定義します。
   "python.languageServer": "Pylance",
-  // Whether to lint Python files.
-  "python.linting.enabled": true,
-  // Whether to lint Python files using pylint.
-  "python.linting.pylintEnabled": false,
-  // Whether to lint Python files using flake8
-  "python.linting.flake8Enabled": true,
-  // Whether to lint Python files when saved.
-  "python.linting.lintOnSave": true,
-  // Arguments passed in. Each argument is a separate item in the array.
-  "python.linting.flake8Args": ["--ignore=E501"],
-  // Provider for formatting. Possible options include 'autopep8', 'black', and 'yapf'.
-  "python.formatting.provider": "autopep8",
   // Enable testing using pytest.
   "python.testing.pytestEnabled": true,
 
@@ -141,13 +125,15 @@
   },
   "[python]": {
     "editor.tabSize": 4,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
   },
   "[sql]": {
     "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
   },
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "vue.volar"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -163,26 +149,6 @@
   },
 
 
-  // sshfs.configs
-  "sshfs.configs": [
-    {
-      "label": "vagrant",
-      "root": "/",
-      "host": "192.168.33.10",
-      "port": 22,
-      "username": "vagrant",
-      "privateKeyPath": "C:\\Users\\username\\.ssh\\id_rsa",
-      "name": "vagrant"
-    }
-  ],
-
-
-  // gitlens
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.statusBar.format": "${author}, ${agoOrDate} • ${message}",
-
 
   // rest-client
   // ユニコードをデコードする。(日本語を表示するため)
@@ -193,8 +159,5 @@
   "hediet.vscode-drawio.theme": "atlas",
 
 
-  // DO NOT SET THIS MANUALLY
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0
 }
