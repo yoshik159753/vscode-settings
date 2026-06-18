@@ -213,6 +213,7 @@ install_extension "humao.rest-client"
 install_extension "mongodb.mongodb-vscode"
 install_extension "arjun.swagger-viewer"
 install_extension "hediet.vscode-drawio"
+install_extension "anthropic.claude-code"
 
 echo ""
 echo "完了しました。"
